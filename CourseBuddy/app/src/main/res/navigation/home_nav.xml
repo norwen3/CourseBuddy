@@ -7,7 +7,24 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.coursebuddy.HomeFragment"
+        android:name="com.example.coursebuddy.fragments.HomeFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_coursesOverviewFragment"
+            app:destination="@id/coursesOverviewFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_currentSemesterFragment"
+            app:destination="@id/currentSemesterFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/coursesOverviewFragment"
+        android:name="com.example.coursebuddy.fragments.CoursesOverviewFragment"
+        android:label="fragment_courses_overview"
+        tools:layout="@layout/fragment_courses_overview" />
+    <fragment
+        android:id="@+id/currentSemesterFragment"
+        android:name="com.example.coursebuddy.fragments.CurrentSemesterFragment"
+        android:label="fragment_current_semester"
+        tools:layout="@layout/fragment_current_semester" />
 </navigation>

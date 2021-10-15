@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/contactsFragment"
-        android:name="com.example.coursebuddy.ContactsFragment"
+        android:name="com.example.coursebuddy.fragments.ContactsFragment"
         android:label="@string/contacts"
         tools:layout="@layout/fragment_contact_list" />
 </navigation>

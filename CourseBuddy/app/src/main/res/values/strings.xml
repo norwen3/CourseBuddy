@@ -19,6 +19,8 @@
     <!-- Home strings -->
     <string name="home">Home</string>
     <string name="content_description_home">Needs to Change</string>
+    <string name="image_description_courses">Course Buddy icon</string>
+    <string name="image_description_semester">Semester Icon</string>
 
     <!-- Favourites strings -->
     <string name="favorite">Favourites</string>
@@ -31,4 +33,5 @@
     <!--  -->
     <string name="contacts">Contacts</string>
     <string name="contacts_description">Your contacts are here!</string>
+    <string name="menu_item"></string>
 </resources>

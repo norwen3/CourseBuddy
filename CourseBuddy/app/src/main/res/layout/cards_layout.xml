@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/DarkPrimary"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/menuImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/image_description_courses"
+                android:padding="5dp"
+                android:src="@drawable/ic_home"
+                />
+            <TextView
+                android:id="@+id/menuText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_card_text"
+                android:layout_marginTop="@dimen/margin_card_text"
+                android:layout_toEndOf="@id/menuImage"
+                android:text="@string/menu_item"
+                android:textColor="@color/TextAndIconColour"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!--
+    <Button
+                android:id="@+id/coursesOverviewButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/ShapeAppearanceOverlay.MyTheme.Button"
+                android:text="Click for courses"
+                />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/semester_card"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardBackgroundColor="@color/cardview_light_background">
+
+        <Button
+            android:id="@+id/semesterOverviewButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/ShapeAppearanceOverlay.MyTheme.Button"
+            android:text="Click for courses"
+
+            />
+    </androidx.cardview.widget.CardView>
+    -->

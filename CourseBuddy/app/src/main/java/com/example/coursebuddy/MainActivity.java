@@ -13,10 +13,13 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
+import com.example.coursebuddy.fragments.CoursesOverviewFragment;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -44,9 +47,10 @@ public class MainActivity extends AppCompatActivity {
         NavHostFragment navHostFragment = (NavHostFragment) fm.findFragmentById(R.id.nav_host_fragment);
         navController = navHostFragment.getNavController();
 
+
         AppBarConfiguration appBarConfiguration =
-                new AppBarConfiguration.Builder(navController.getGraph()).
-                        setFallbackOnNavigateUpListener(this::onSupportNavigateUp)
+                new AppBarConfiguration.Builder(navController.getGraph())
+                        .setFallbackOnNavigateUpListener(this::onSupportNavigateUp)
                         .setOpenableLayout(drawerLayout)
                         .build();
         toolbar = findViewById(R.id.topAppBar);
@@ -54,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(bottomNav, navController);
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
 
     }
 

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.coursebuddy.placeholder.PlaceholderContent.PlaceholderItem;
 import com.example.coursebuddy.databinding.FragmentContactBinding;
 
+
 import java.util.List;
 
 /**

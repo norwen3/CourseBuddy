@@ -1,4 +1,4 @@
-package com.example.coursebuddy;
+package com.example.coursebuddy.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.coursebuddy.MyContactsRecyclerViewAdapter;
+import com.example.coursebuddy.R;
 import com.example.coursebuddy.placeholder.PlaceholderContent;
 
 /**
