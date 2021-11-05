@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
  <group
      android:id="@+id/main_components"
      android:checkableBehavior="none"
@@ -33,5 +34,15 @@
         android:title="Bookmarks"
         android:contentDescription="Something"
         />
+
+
  </group>
+    <item
+        android:id="@+id/logout"
+        android:menuCategory="system"
+        android:title="Log out"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+
+        />
 </menu>

@@ -68,4 +68,26 @@
         <item name="itemRippleColor">@color/mtrl_navigation_bar_ripple_color</item>
     </style>
 
+    <!-- AppBarLayout styles -->
+    <style name="Widget.Design.AppBarLayout" parent="android:Widget">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/design_appbar_state_list_animator
+        </item>
+        <item name="android:keyboardNavigationCluster" tools:ignore="NewApi">true</item>
+        <item name="android:touchscreenBlocksFocus" tools:ignore="NewApi">true</item>
+    </style>
+
+    <!-- Toolbar styles -->
+    <style name="Widget.MaterialComponents.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">?attr/textAppearanceHeadline6</item>
+        <item name="titleTextColor">?android:attr/textColorPrimary</item>
+        <item name="subtitleTextAppearance">?attr/textAppearanceSubtitle1</item>
+        <item name="subtitleTextColor">?android:attr/textColorSecondary</item>
+        <!-- Overrides minimum height in landscape to avoid headline6 and subtitle1 height concerns. -->
+        <item name="android:minHeight">@dimen/mtrl_toolbar_default_height</item>
+        <item name="maxButtonHeight">@dimen/mtrl_toolbar_default_height</item>
+        <item name="android:homeAsUpIndicator">?android:homeAsUpIndicator</item>
+    </style>
+
 </resources>

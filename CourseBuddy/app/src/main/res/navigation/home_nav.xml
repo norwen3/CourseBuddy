@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_nav"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/homeFragment"
+    >
 
     <fragment
         android:id="@+id/homeFragment"
@@ -14,17 +15,50 @@
             android:id="@+id/action_homeFragment_to_coursesOverviewFragment"
             app:destination="@id/coursesOverviewFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_currentSemesterFragment"
-            app:destination="@id/currentSemesterFragment"/>
+            android:id="@+id/action_homeFragment_to_semesterOverviewFragment"
+            app:destination="@id/semesterOverviewFragment" />
     </fragment>
     <fragment
         android:id="@+id/coursesOverviewFragment"
         android:name="com.example.coursebuddy.fragments.CoursesOverviewFragment"
-        android:label="fragment_courses_overview"
-        tools:layout="@layout/fragment_courses_overview" />
+        android:label="Courses"
+        tools:layout="@layout/fragment_courses_overview" >
+        <action
+            android:id="@+id/action_coursesOverviewFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/currentSemesterFragment"
-        android:name="com.example.coursebuddy.fragments.CurrentSemesterFragment"
-        android:label="fragment_current_semester"
-        tools:layout="@layout/fragment_current_semester" />
+        android:id="@+id/semesterOverviewFragment"
+        android:name="com.example.coursebuddy.fragments.SemesterOverviewFragment"
+        android:label="Semesters"
+        tools:layout="@layout/fragment_semester_overview" >
+        <action
+            android:id="@+id/action_semesterOverviewFragment_to_semesterFragment"
+            app:destination="@id/semesterFragment" />
+        <action
+            android:id="@+id/action_semesterOverviewFragment_to_newSemesterFragment"
+            app:destination="@id/newSemesterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.example.coursebuddy.fragments.CourseFragment"
+        android:label="fragment_course"
+        tools:layout="@layout/fragment_course" />
+    <fragment
+        android:id="@+id/semesterFragment"
+        android:name="com.example.coursebuddy.fragments.SemesterFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_semester" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_semesterFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newSemesterFragment"
+        android:name="com.example.coursebuddy.NewSemesterFragment"
+        android:label="fragment_new_semester"
+        tools:layout="@layout/fragment_new_semester" />
 </navigation>
